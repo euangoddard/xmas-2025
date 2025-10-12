@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import type { RequestHandler } from "@builder.io/qwik-city";
-import { Chat, ChatTurns, Role } from "~/types/chat";
+import { type ChatTurns, Role } from "~/types/chat";
 import type { SuspectIds } from "~/types/person";
 import { SYSTEM_PROMPTS } from "~/data/system-prompts";
 import { nanoid } from "nanoid";
