@@ -3,8 +3,8 @@ import { Link, type DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
-    <div class="flex min-h-screen flex-col items-center justify-center p-4">
-      <main class="w-full max-w-3xl rounded-md bg-amber-50 p-8 text-zinc-800 shadow-2xl">
+    <div class="flex min-h-screen flex-col items-center justify-center">
+      <main class="w-full max-w-3xl rounded-md bg-amber-50 p-6 text-zinc-800 shadow-2xl">
         <header class="mb-6 border-b-2 border-stone-300 pb-6 text-center">
           <h1 class="font-display text-3xl text-red-900 md:text-4xl">
             Welcome and Merry Christmas!
