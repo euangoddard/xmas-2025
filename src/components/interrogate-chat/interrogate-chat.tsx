@@ -122,7 +122,10 @@ export const InterrogateChat = component$<InterrogateChatProps>(
           Interrogation: {currentSuspect.name}
         </h2>
 
-        <div class="mb-6 flex-grow space-y-4" ref={messagePanel}>
+        <div
+          class="mb-6 max-h-[60vh] flex-grow space-y-4 overflow-y-auto"
+          ref={messagePanel}
+        >
           {state.turns.map((turn) => {
             return turn.role === Role.User ? (
               <UserMessage message={turn.content} key={turn.id} />
@@ -144,7 +147,7 @@ export const InterrogateChat = component$<InterrogateChatProps>(
           >
             Ask {currentSuspect.name} a question:
           </label>
-          <div class="flex flex-col gap-2 sm:flex-row">
+          <div class="flex gap-2">
             <textarea
               id="question"
               rows={1}
