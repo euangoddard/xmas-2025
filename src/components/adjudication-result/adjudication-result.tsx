@@ -13,11 +13,9 @@ export const AdjudicationResult = component$<AdjudicationResultProps>(
   }) => {
     const showDetails = useSignal(false);
     return (
-      <div class="rounded-md bg-amber-50 p-6 text-zinc-800 shadow-2xl md:p-8">
+      <div class="panel-amber">
         <div class="mb-6 flex items-center justify-between border-b-2 border-stone-300 pb-4">
-          <h2 class="font-mono text-sm tracking-widest text-teal-800 uppercase">
-            Adjudication Result
-          </h2>
+          <h2 class="heading-mono">Adjudication Result</h2>
           <Link
             href="/dossier/"
             class="font-mono text-sm text-red-800 hover:underline"

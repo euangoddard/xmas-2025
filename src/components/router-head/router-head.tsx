@@ -26,6 +26,21 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@700&family=Roboto+Mono&display=swap"
         rel="stylesheet"
       />
+      <meta property="og:url" content="https://xmas-2025.euans.space/" />
+      <meta
+        property="og:title"
+        content="A Holly & Ivy Killing - A Christmas Murder Mystery"
+      />
+      <meta
+        property="og:description"
+        content="Solve the festive murder at Blackwood Manor. Interrogate suspects, uncover secrets, and reveal the killer in this classic Agatha Christie-style whodunit."
+      />
+      <meta
+        property="og:image"
+        content="https://xmas-2025.euans.space/holly-and-ivy.webp"
+      />
+      <meta property="og:image:width" content="640" />
+      <meta property="og:image:height" content="640" />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />

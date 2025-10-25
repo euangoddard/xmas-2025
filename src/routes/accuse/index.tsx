@@ -2,6 +2,7 @@ import { component$, useSignal, useComputed$ } from "@builder.io/qwik";
 import {
   DocumentHead,
   Form,
+  Link,
   routeAction$,
   routeLoader$,
   z,
@@ -64,20 +65,15 @@ export default component$(() => {
             finalVerdict={result.value.finalVerdict}
           />
         ) : (
-          <Form
-            class="rounded-md bg-amber-50 p-6 text-zinc-800 shadow-2xl md:p-8"
-            action={checkAccusation}
-          >
+          <Form class="panel-amber" action={checkAccusation}>
             <div class="mb-6 flex items-center justify-between border-b-2 border-stone-300 pb-4">
-              <h2 class="font-mono text-sm tracking-widest text-teal-800 uppercase">
-                Final Report
-              </h2>
-              <a
-                href="#"
+              <h2 class="heading-mono">Final Report</h2>
+              <Link
+                href="/dossier/"
                 class="font-mono text-sm text-red-800 hover:underline"
               >
                 Return to Dossier
-              </a>
+              </Link>
             </div>
 
             <div class="space-y-6">
@@ -153,7 +149,7 @@ export default component$(() => {
 
             <div class="mt-8 border-t-2 border-stone-300 pt-6 text-center">
               <button
-                class="inline-flex items-center gap-4 rounded-sm bg-red-800 px-8 py-3 font-mono text-lg tracking-widest text-stone-100 uppercase shadow-lg transition-all duration-200 hover:bg-red-700 hover:shadow-xl focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-amber-50 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                class="btn-red inline-flex items-center gap-4"
                 disabled={selected.value === null || checkAccusation.isRunning}
               >
                 {checkAccusation.isRunning && (

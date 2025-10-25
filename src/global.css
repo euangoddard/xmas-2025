@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+.btn-red {
+  @apply rounded-sm bg-red-800 px-8 py-3 font-mono text-lg tracking-widest text-stone-100 uppercase shadow-lg transition-all duration-200 hover:bg-red-700 hover:shadow-xl focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-amber-50 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.panel-amber {
+  @apply rounded-md bg-amber-50 p-6 text-zinc-800 shadow-2xl md:p-8;
+}
+
+.heading-mono {
+  @apply font-mono text-sm tracking-widest text-teal-800 uppercase;
+}
+
 @theme {
   --font-serif: "Lora", serif;
   --font-display: "Playfair Display", serif;

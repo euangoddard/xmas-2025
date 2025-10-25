@@ -117,8 +117,8 @@ export const InterrogateChat = component$<InterrogateChatProps>(
     });
 
     return (
-      <div class="flex h-full flex-col rounded-md bg-amber-50 p-6 text-zinc-800 shadow-lg">
-        <h2 class="font-display mb-1 text-2xl text-red-900">
+      <div class="panel-amber flex h-full flex-col shadow-lg">
+        <h2 class="font-display heading-mono mb-1 text-2xl text-red-900">
           Interrogation: {currentSuspect.name}
         </h2>
 
@@ -161,7 +161,7 @@ export const InterrogateChat = component$<InterrogateChatProps>(
               disabled={state.loading || state.thinking}
             ></textarea>
             <button
-              class="rounded-sm bg-red-800 px-6 py-2 whitespace-nowrap text-stone-100 shadow-md transition-all duration-200 hover:bg-red-700 hover:shadow-lg focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-amber-50 focus:outline-none"
+              class="btn-red px-6 py-2 whitespace-nowrap shadow-md"
               disabled={
                 state.loading || state.thinking || state.prompt.trim() === ""
               }
