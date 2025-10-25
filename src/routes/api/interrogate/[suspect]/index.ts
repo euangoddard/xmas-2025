@@ -4,6 +4,7 @@ import { type ChatTurns, Role } from "~/types/chat";
 import type { SuspectIds } from "~/types/person";
 import { SYSTEM_PROMPTS } from "~/data/system-prompts";
 import { nanoid } from "nanoid";
+import { cacheExpirationTtl } from "~/data/caching";
 
 export const onPost: RequestHandler = async ({
   request,
@@ -64,6 +65,9 @@ export const onPost: RequestHandler = async ({
         { id: nanoid(), role: Role.Assistant, content: message },
       ],
     }),
+    {
+      expirationTtl: cacheExpirationTtl,
+    },
   );
 
   writer.close();

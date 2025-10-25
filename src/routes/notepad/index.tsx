@@ -6,6 +6,7 @@ import {
   useNavigate,
   DocumentHead,
 } from "@builder.io/qwik-city";
+import { cacheExpirationTtl } from "~/data/caching";
 import { getGameId } from "~/utils/game-id";
 
 export const useNotes = routeLoader$(async ({ platform, cookie }) => {
@@ -23,7 +24,9 @@ export const useSaveNotes = routeAction$(
   async ({ notes }, { platform, cookie }) => {
     const { XMAS_2025 } = platform.env;
     const gameId = getGameId(cookie);
-    await XMAS_2025.put(`${gameId}/notes`, (notes as string) || "");
+    await XMAS_2025.put(`${gameId}/notes`, (notes as string) || "", {
+      expirationTtl: cacheExpirationTtl,
+    });
     return { success: true };
   },
 );
