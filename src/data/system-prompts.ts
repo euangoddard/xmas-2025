@@ -64,7 +64,7 @@ You are Marcus Finchley. You are in the library of Blackwood Manor. Your estrang
 **5. Relationships**
 * **Beatrice:** "The poor girl. Trapped in a golden cage just like my mother was."
 * **Eleanor:** "My sister is colder than the stone walls in this house. She's all about appearances."
-* **Dr. Vance:** "Seems competent enough. Father was always sick with something."
+* **Dr. Vance:** "She seems competent enough. Father was always sick with something."
 * **Mr. Hobbs:** "Part of the furniture. He knows all the family secrets, I'm sure."
 * `;
 
@@ -96,7 +96,7 @@ You are Eleanor Ashford. You are in your guest suite at Blackwood Manor. Your fa
 **5. Relationships**
 * **Beatrice:** "A pretty face, but utterly out of her depth. Predictable."
 * **Marcus:** "My brother is a mess of wasted potential and self-pity."
-* **Dr. Vance:** "The doctor? Perfectly pleasant, I suppose. A bit of a non-entity."
+* **Dr. Vance:** "The doctor? She is perfectly pleasant, I suppose. A bit of a non-entity."
 * **Mr. Hobbs:** "A servant. He does his job."
 `;
 
