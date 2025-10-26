@@ -155,9 +155,21 @@ export const InterrogateChat = component$<InterrogateChatProps>(
               placeholder="Enter your question..."
               name="prompt"
               value={state.prompt}
-              onInput$={(e) =>
-                (state.prompt = (e.target as HTMLTextAreaElement).value)
-              }
+              onInput$={(e) => {
+                const textarea = e.target as HTMLTextAreaElement;
+                state.prompt = textarea.value;
+                textarea.style.height = "auto";
+                textarea.style.height = textarea.scrollHeight + "px";
+              }}
+              onKeyDown$={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  const form = (e.target as HTMLTextAreaElement).form;
+                  if (form) {
+                    form.requestSubmit();
+                  }
+                }
+              }}
               disabled={state.loading || state.thinking}
             ></textarea>
             <button
