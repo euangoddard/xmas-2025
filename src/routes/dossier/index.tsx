@@ -1,4 +1,8 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import {
+  component$,
+  useSignal,
+  useSignal as useQwikSignal,
+} from "@builder.io/qwik";
 import { CaseFileCard } from "../../components/case-file-card/case-file-card";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import { type DocumentHead } from "@builder.io/qwik-city";
@@ -13,6 +17,7 @@ export const useCaseFileCards = routeLoader$<readonly SuspectDetail[]>(() => {
 export default component$(() => {
   const caseFileCards = useCaseFileCards();
   const selectedCardId = useSignal(caseFileCards.value[0].id);
+  const sidebarRef = useQwikSignal<HTMLElement>();
 
   return (
     <div class="container mx-auto p-4 md:p-8">
@@ -70,7 +75,15 @@ export default component$(() => {
                     key={id}
                     {...props}
                     isActive={selectedCardId.value === id}
-                    onSelect$={() => (selectedCardId.value = id)}
+                    onSelect$={() => {
+                      selectedCardId.value = id;
+                      if (sidebarRef.value) {
+                        sidebarRef.value.scrollIntoView({
+                          behavior: "smooth",
+                          block: "nearest",
+                        });
+                      }
+                    }}
                   />
                 );
               })}
@@ -78,7 +91,7 @@ export default component$(() => {
           </div>
         </div>
 
-        <aside class="lg:col-span-1">
+        <aside class="lg:col-span-1" ref={sidebarRef}>
           <CurrentFileSidebar
             {...caseFileCards.value.find(
               (card) => card.id === selectedCardId.value,
