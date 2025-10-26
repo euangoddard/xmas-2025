@@ -79,14 +79,14 @@ export default component$(() => {
             <div class="space-y-6">
               <div>
                 <label class="mb-3 block font-bold text-zinc-700">
-                  1. I Accuse...
+                  1. I Accuse&hellip;
                 </label>
                 <input
                   type="hidden"
                   name="accused"
                   value={selected.value || ""}
                 />
-                <div class="grid grid-cols-3 gap-4 sm:grid-cols-5">
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-5">
                   {accusedList.value.map((person) => (
                     <button
                       type="button"
@@ -117,14 +117,14 @@ export default component$(() => {
 
               <div>
                 <label for="method" class="mb-2 block font-bold text-zinc-700">
-                  2. The murder was committed by...
+                  2. The murder was committed by&hellip;
                 </label>
                 <input
                   type="text"
                   id="method"
                   name="method"
                   class="w-full rounded-sm border border-stone-300 bg-stone-100 p-3 font-mono text-base text-zinc-800 focus:ring-2 focus:ring-red-800 focus:outline-none"
-                  placeholder="e.g., Poison in the port..."
+                  placeholder="e.g., Poison in the port&hellip;"
                   autocomplete="off"
                   required
                   disabled={checkAccusation.isRunning}
@@ -133,14 +133,14 @@ export default component$(() => {
 
               <div>
                 <label for="motive" class="mb-2 block font-bold text-zinc-700">
-                  3. The killer's motive was...
+                  3. The killer's motive was&hellip;
                 </label>
                 <textarea
                   id="motive"
                   name="motive"
                   rows={5}
                   class="w-full rounded-sm border border-stone-300 bg-stone-100 p-3 font-mono text-base text-zinc-800 focus:ring-2 focus:ring-red-800 focus:outline-none"
-                  placeholder="e.g., Revenge for a past injustice..."
+                  placeholder="e.g., Revenge for a past injustice&hellip;"
                   required
                   disabled={checkAccusation.isRunning}
                 ></textarea>
