@@ -79,7 +79,7 @@ export default component$(() => {
             <div class="space-y-6">
               <div>
                 <label class="mb-3 block font-bold text-zinc-700">
-                  1. I Accuse&hellip;
+                  1. I Accuse…
                 </label>
                 <input
                   type="hidden"
@@ -117,14 +117,14 @@ export default component$(() => {
 
               <div>
                 <label for="method" class="mb-2 block font-bold text-zinc-700">
-                  2. The murder was committed by&hellip;
+                  2. The murder was committed by…
                 </label>
                 <input
                   type="text"
                   id="method"
                   name="method"
                   class="w-full rounded-sm border border-stone-300 bg-stone-100 p-3 font-mono text-base text-zinc-800 focus:ring-2 focus:ring-red-800 focus:outline-none"
-                  placeholder="e.g., Poison in the port&hellip;"
+                  placeholder="e.g., Poison in the port…"
                   autocomplete="off"
                   required
                   disabled={checkAccusation.isRunning}
@@ -133,14 +133,14 @@ export default component$(() => {
 
               <div>
                 <label for="motive" class="mb-2 block font-bold text-zinc-700">
-                  3. The killer's motive was&hellip;
+                  3. The killer's motive was…
                 </label>
                 <textarea
                   id="motive"
                   name="motive"
                   rows={5}
                   class="w-full rounded-sm border border-stone-300 bg-stone-100 p-3 font-mono text-base text-zinc-800 focus:ring-2 focus:ring-red-800 focus:outline-none"
-                  placeholder="e.g., Revenge for a past injustice&hellip;"
+                  placeholder="e.g., Revenge for a past injustice…"
                   required
                   disabled={checkAccusation.isRunning}
                 ></textarea>

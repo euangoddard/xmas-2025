@@ -81,7 +81,7 @@ export default component$(() => {
             id="notepad"
             rows={15}
             class="w-full rounded-sm border border-stone-300 bg-stone-100 p-4 font-mono text-base text-zinc-800 focus:ring-2 focus:ring-red-800 focus:outline-none"
-            placeholder={`Type your notes here...\n- What was Beatrice so afraid of?\n- Marcus mentioned a 'Vance'. Who is that?\n- Check Dr. Vance's alibi during the carol singers...`}
+            placeholder={`Type your notes here…\n- What was Beatrice so afraid of?\n- Marcus mentioned a 'Vance'. Who is that?\n- Check Dr. Vance's alibi during the carol singers…`}
             value={state.notes}
             onInput$={(e) =>
               (state.notes = (e.target as HTMLTextAreaElement).value)
@@ -105,11 +105,7 @@ export default component$(() => {
               }}
               disabled={state.saving}
             >
-              {state.saving
-                ? "Saving..."
-                : state.saved
-                  ? "Saved!"
-                  : "Save Notes"}
+              {state.saving ? "Saving…" : state.saved ? "Saved!" : "Save Notes"}
             </button>
           </div>
         </div>

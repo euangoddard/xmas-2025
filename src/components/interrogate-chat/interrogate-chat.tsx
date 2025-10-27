@@ -152,7 +152,7 @@ export const InterrogateChat = component$<InterrogateChatProps>(
               id="question"
               rows={1}
               class="w-full resize-none rounded-sm border border-stone-300 bg-stone-100 p-3 font-mono focus:ring-2 focus:ring-red-800 focus:outline-none"
-              placeholder="Ask your question..."
+              placeholder="Ask your question…"
               name="prompt"
               value={state.prompt}
               onInput$={(e) => {
