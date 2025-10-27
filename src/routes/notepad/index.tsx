@@ -1,11 +1,11 @@
 import { component$, useStore } from "@builder.io/qwik";
 import {
-  Link,
   routeLoader$,
   routeAction$,
   useNavigate,
   DocumentHead,
 } from "@builder.io/qwik-city";
+import { ReturnLink } from "~/components/return-link/return-link";
 import { cacheExpirationTtl } from "~/data/caching";
 import { getGameId } from "~/utils/game-id";
 
@@ -60,21 +60,7 @@ export default component$(() => {
             <h2 class="font-mono text-sm tracking-widest text-teal-800 uppercase">
               Case Notes: The Finchley Murder
             </h2>
-            {fromSuspect.value ? (
-              <Link
-                href={`/interrogate/${fromSuspect.value}`}
-                class="font-mono text-sm text-red-800 hover:underline"
-              >
-                Return to Interrogation
-              </Link>
-            ) : (
-              <Link
-                href="/dossier"
-                class="font-mono text-sm text-red-800 hover:underline"
-              >
-                Return to Dossier
-              </Link>
-            )}
+            <ReturnLink fromSuspect={fromSuspect.value} />
           </div>
 
           <textarea

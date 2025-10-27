@@ -60,6 +60,14 @@ export default component$(() => {
             </li>
             <li>
               <Link
+                href={`/hints/?from=${currentSuspect.value.id}`}
+                class="font-bold text-amber-400 hover:text-red-600 hover:underline"
+              >
+                View hints
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/dossier/"
                 class="font-bold text-amber-400 hover:text-red-600 hover:underline"
               >

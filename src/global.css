@@ -19,3 +19,16 @@
 
   --color-antique-white: #faebd7;
 }
+
+details > summary {
+  @apply cursor-pointer rounded border border-stone-300 bg-stone-100 px-4 py-3 font-mono text-zinc-900 transition-colors;
+}
+details > summary:hover {
+  @apply bg-stone-200;
+}
+details[open] > summary {
+  @apply rounded-b-none bg-stone-200;
+}
+details > div {
+  @apply rounded-b border border-t-0 border-stone-300 bg-stone-50 p-4;
+}
