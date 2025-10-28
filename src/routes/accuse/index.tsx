@@ -124,7 +124,7 @@ export default component$(() => {
                   id="method"
                   name="method"
                   class="w-full rounded-sm border border-stone-300 bg-stone-100 p-3 font-mono text-base text-zinc-800 focus:ring-2 focus:ring-red-800 focus:outline-none"
-                  placeholder="e.g., Poison in the port…"
+                  placeholder="e.g., Smothered with a pillow…"
                   autocomplete="off"
                   required
                   disabled={checkAccusation.isRunning}
@@ -140,7 +140,7 @@ export default component$(() => {
                   name="motive"
                   rows={5}
                   class="w-full rounded-sm border border-stone-300 bg-stone-100 p-3 font-mono text-base text-zinc-800 focus:ring-2 focus:ring-red-800 focus:outline-none"
-                  placeholder="e.g., Revenge for a past injustice…"
+                  placeholder="e.g., To save the family honour…"
                   required
                   disabled={checkAccusation.isRunning}
                 ></textarea>
@@ -155,7 +155,7 @@ export default component$(() => {
                 {checkAccusation.isRunning && (
                   <span class="inline-block h-5 w-5 animate-spin rounded-full border-2 border-t-2 border-white/40 border-t-white"></span>
                 )}
-                Confirm Accusation
+                Make Accusation
               </button>
             </div>
           </Form>

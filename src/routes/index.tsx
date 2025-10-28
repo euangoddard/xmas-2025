@@ -70,7 +70,7 @@ export default component$(() => {
                   </strong>{" "}
                   If you learn something new from one suspect (like a name or a
                   secret argument), use it to confront another. A lie will crack
-                  under pressure.
+                  under scrutiny.
                 </p>
               </div>
             </li>
@@ -80,10 +80,14 @@ export default component$(() => {
                 <h3 class="font-display text-xl text-zinc-900">
                   Connect the Clues
                 </h3>
-                <p class="text-zinc-700">
+                <p class="mb-2 text-zinc-700">
                   As you gather information, a timeline will form. Who had the
                   opportunity? Who had the strongest motive? Who is lying about
                   their alibi?
+                </p>
+                <p class="text-zinc-700">
+                  If you're stuck, use the hints to help move your investigation
+                  along.
                 </p>
               </div>
             </li>
