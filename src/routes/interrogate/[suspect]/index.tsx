@@ -54,7 +54,12 @@ export const useAddSummaryToNotepad = routeAction$(
     )) as string;
 
     const summary = await createSummary(question, answer, suspect, env);
-    const updatedNotes = `${existingNotes}\n\n${summary}`;
+    let updatedNotes: string;
+    if (!existingNotes || existingNotes.trim() === "") {
+      updatedNotes = summary ?? "";
+    } else {
+      updatedNotes = `${existingNotes}\n\n${summary ?? ""}`;
+    }
 
     await XMAS_2025.put(`${gameId}/notes`, updatedNotes, {
       expirationTtl: cacheExpirationTtl,
