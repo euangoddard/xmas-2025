@@ -12,6 +12,7 @@ import type { Suspect } from "~/types/person";
 import { UserMessage } from "../user-message/user-message";
 import { SuspectMessage } from "../suspect-message/suspect-message";
 import { Thinking } from "../thinking/thinking";
+import { NoteTaker } from "../note-taker/note-taker";
 
 export interface InterrogateChatProps {
   currentSuspect: Suspect;
@@ -139,6 +140,10 @@ export const InterrogateChat = component$<InterrogateChatProps>(
           })}
           {state.thinking && <Thinking />}
         </div>
+
+        {!state.thinking && (
+          <NoteTaker turns={state.turns} suspect={currentSuspect} />
+        )}
 
         <form class="mt-auto" onSubmit$={handleSubmit} preventdefault:submit>
           <label
