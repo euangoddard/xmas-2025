@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { type ChatTurns, Role } from "~/types/chat";
 import { useAddSummaryToNotepad } from "~/routes/interrogate/[suspect]";
 import { type Suspect } from "~/types/person";
+import { Link } from "@builder.io/qwik-city";
 
 export interface NoteTakerProps {
   turns: ChatTurns;
@@ -19,6 +20,14 @@ export const NoteTaker = component$<NoteTakerProps>(({ turns, suspect }) => {
             <div class="rounded border border-green-300 bg-green-50 px-3 py-2 text-xs text-green-800">
               <div class="mb-1 font-bold">Summary added to notepad:</div>
               <div>{addSummaryToNotepad.value.summary}</div>
+              <div class="mt-2">
+                <Link
+                  href="/notepad"
+                  class="font-mono text-xs text-green-700 underline hover:text-green-900"
+                >
+                  View Notepad
+                </Link>
+              </div>
             </div>
           ) : (
             <button
@@ -44,7 +53,7 @@ export const NoteTaker = component$<NoteTakerProps>(({ turns, suspect }) => {
               {addSummaryToNotepad.isRunning && (
                 <span class="inline-block h-4 w-4 animate-spin rounded-full border-2 border-t-2 border-zinc-700/40 border-t-zinc-700"></span>
               )}
-              Add to Notepad
+              Add snippet to Notepad
             </button>
           )}
         </div>
