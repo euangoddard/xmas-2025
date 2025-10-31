@@ -19,6 +19,8 @@ export const CurrentFileSidebar = component$<CurrentFileSidebarProps>(
         <div class="text-center">
           <img
             src={imgSrc}
+            decoding="async"
+            loading="lazy"
             alt={`Portrait of ${name}`}
             class="mx-auto mb-4 w-1/2 rounded-sm shadow-md"
             width={400}

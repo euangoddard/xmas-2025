@@ -21,6 +21,8 @@ export const CaseFileCard = component$<CaseFileCardProps>(
       >
         <img
           src={imgSrc}
+          decoding="async"
+          loading="lazy"
           alt={`Portrait of ${name}`}
           class="h-auto w-full rounded-t-sm object-cover"
           width={400}

@@ -102,6 +102,8 @@ export default component$(() => {
                     >
                       <img
                         src={person.imgSrc}
+                        decoding="async"
+                        loading="lazy"
                         alt={`Portrait of ${person.name}`}
                         class="h-auto w-full rounded-sm object-cover"
                         width={150}
