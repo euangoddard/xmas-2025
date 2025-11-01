@@ -22,7 +22,7 @@ export const NoteTaker = component$<NoteTakerProps>(({ turns, suspect }) => {
               <div>{addSummaryToNotepad.value.summary}</div>
               <div class="mt-2">
                 <Link
-                  href="/notepad"
+                  href={`/notepad/?from=${suspect.id}`}
                   class="font-mono text-xs text-green-700 underline hover:text-green-900"
                 >
                   View Notepad

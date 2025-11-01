@@ -10,14 +10,14 @@ export const ReturnLink = component$<ReturnLinkProps>(({ fromSuspect }) => {
     <>
       {fromSuspect ? (
         <Link
-          href={`/interrogate/${fromSuspect}`}
+          href={`/interrogate/${fromSuspect}/`}
           class="font-mono text-sm text-red-800 hover:underline"
         >
           Return to Interrogation
         </Link>
       ) : (
         <Link
-          href="/dossier"
+          href="/dossier/"
           class="font-mono text-sm text-red-800 hover:underline"
         >
           Return to Dossier
