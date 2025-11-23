@@ -87,42 +87,44 @@ export default component$(() => {
           currentSuspect={currentSuspect.value}
         />
 
-        <Card title="Actions">
-          <ul class="list-inside list-disc space-y-2 text-stone-300">
-            <li>
-              <Link
-                href={`/notepad/?from=${currentSuspect.value.id}`}
-                class="font-bold text-amber-400 hover:text-red-600 hover:underline"
-              >
-                Open notepad
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={`/hints/?from=${currentSuspect.value.id}`}
-                class="font-bold text-amber-400 hover:text-red-600 hover:underline"
-              >
-                View hints
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/dossier/"
-                class="font-bold text-amber-400 hover:text-red-600 hover:underline"
-              >
-                View the Dossier
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/accuse/"
-                class="font-bold text-amber-400 hover:text-red-600 hover:underline"
-              >
-                Accuse the killer
-              </Link>
-            </li>
-          </ul>
-        </Card>
+        <div class="hidden md:block">
+          <Card title="Actions">
+            <ul class="list-inside list-disc space-y-2 text-stone-300">
+              <li>
+                <Link
+                  href={`/notepad/?from=${currentSuspect.value.id}`}
+                  class="font-bold text-amber-400 hover:text-red-600 hover:underline"
+                >
+                  Open notepad
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/hints/?from=${currentSuspect.value.id}`}
+                  class="font-bold text-amber-400 hover:text-red-600 hover:underline"
+                >
+                  View hints
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/dossier/"
+                  class="font-bold text-amber-400 hover:text-red-600 hover:underline"
+                >
+                  View the Dossier
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/accuse/"
+                  class="font-bold text-amber-400 hover:text-red-600 hover:underline"
+                >
+                  Accuse the killer
+                </Link>
+              </li>
+            </ul>
+          </Card>
+        </div>
       </aside>
 
       <main class="lg:col-span-2">
