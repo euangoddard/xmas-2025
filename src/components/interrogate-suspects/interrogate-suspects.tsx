@@ -16,7 +16,23 @@ export const InterrogateSuspects = component$<InterrogateSuspectsProps>(
   ({ suspects, currentSuspect }) => {
     return (
       <Card title="Suspects">
-        <ul class="space-y-3">
+        <div class="sticky top-0 z-10 block md:hidden">
+          <select
+            class="w-full rounded-sm border border-stone-600 bg-stone-800 p-2 text-amber-100 focus:border-red-600 focus:outline-none"
+            value={currentSuspect.id}
+            onChange$={(e, target) => {
+              location.href = `/interrogate/${target.value}/`;
+            }}
+          >
+            {suspects.map(({ id, name }) => (
+              <option key={id} value={id}>
+                {name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <ul class="hidden space-y-3 md:block">
           {suspects.map(({ id, name, role }) =>
             id === currentSuspect.id ? (
               <li key={id} class={activeSuspectCssClasses}>
