@@ -25,7 +25,7 @@ export const InterrogateSuspects = component$<InterrogateSuspectsProps>(
             }}
           >
             {suspects.map(({ id, name }) => (
-              <option key={id} value={id}>
+              <option key={id} value={id} selected={id === currentSuspect.id}>
                 {name}
               </option>
             ))}
